@@ -9,18 +9,19 @@
 <body>
     <a-scene embedded arjs>
         <a-assets>
-            <a-asset-item id="sunflower" src="./SunflowerGarden.glb"></a-asset-item>
+            <a-asset-item id="lulu" src="./lulu.gif"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
             <a-gltf-model
-                src="#sunflower"
-                position="0 0.2 0"
-                scale="0.3 0.3 0.3"
-                rotation="-90 0 0"
+                src="#lulu"
+                position="0 0.1 0"
+                scale="0.1 0.1 0.1"
+                rotation="0 0 0"
                 >
             </a-gltf-model>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
 </body>
+
 </html>
