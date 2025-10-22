@@ -1,45 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <title>My first three.js Face app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
   </head>
-  <body style="margin : 0px; overflow: hidden;">
-
-    <a-scene
-      vr-mode-ui="enabled: false"
-      renderer="logarithmicDepthBuffer: true;"
-      arjs="sourceType: webcam; detectionMode: mono; videoTexture: true; debugUIEnabled: false;"
-    >
-
-      <a-nft
-        type="nft"
-        url="path/ke/pola.fset"  smooth="true"
-        smooth-tolerance=".01"
-        smooth-threshold="5"
-      >
-        <a-image
-          src="path/ke/lulu.gif"  width="1"
-          height="1"
-          position="0 0 0"
-          rotation="-90 0 0"
-          gif
-        ></a-image>
-      </a-nft>
-
-      <a-entity camera></a-entity>
+  <body>
+	<a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-image src="./lulu.gif" position="0 0.1 0"
+          rotation="0 0 0"></a-image>a-image>
+        </a-marker>
+		</a-entity camera> </a-scene>a-entity>
     </a-scene>
-    
-    <script>
-      // Ini adalah skrip A-Frame sederhana untuk memutar GIF di elemen a-image
-      AFRAME.registerComponent('gif', {
-        init: function () {
-          var el = this.el;
-          el.setAttribute('material', 'src', el.getAttribute('src'));
-          el.setAttribute('material', 'shader', 'gif');
-        }
-      });
-    </script>
   </body>
 </html>
-
